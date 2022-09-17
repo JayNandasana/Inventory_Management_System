@@ -28,6 +28,7 @@
         <entry key="..\:/Users/jayna/AndroidStudioProjects/InventoryManagementSystem/app/src/main/res/layout/activity_customer_details.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/jayna/AndroidStudioProjects/InventoryManagementSystem/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/jayna/AndroidStudioProjects/InventoryManagementSystem/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/jayna/AndroidStudioProjects/InventoryManagementSystem/app/src/main/res/layout/activity_menu_payment_details.xml" value="0.190625" />
         <entry key="..\:/Users/jayna/AndroidStudioProjects/InventoryManagementSystem/app/src/main/res/layout/activity_order_list.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/jayna/AndroidStudioProjects/InventoryManagementSystem/app/src/main/res/layout/activity_payment_details.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/jayna/AndroidStudioProjects/InventoryManagementSystem/app/src/main/res/layout/activity_profile.xml" value="0.25416666666666665" />
@@ -38,8 +39,10 @@
         <entry key="..\:/Users/jayna/AndroidStudioProjects/InventoryManagementSystem/app/src/main/res/layout/fragment_gallery.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/jayna/AndroidStudioProjects/InventoryManagementSystem/app/src/main/res/layout/fragment_home.xml" value="0.176" />
         <entry key="..\:/Users/jayna/AndroidStudioProjects/InventoryManagementSystem/app/src/main/res/layout/fragment_my_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/jayna/AndroidStudioProjects/InventoryManagementSystem/app/src/main/res/layout/fragment_payment_details_.xml" value="0.180078125" />
         <entry key="..\:/Users/jayna/AndroidStudioProjects/InventoryManagementSystem/app/src/main/res/layout/fragment_slideshow.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/jayna/AndroidStudioProjects/InventoryManagementSystem/app/src/main/res/layout/nav_header_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/jayna/AndroidStudioProjects/InventoryManagementSystem/app/src/main/res/layout/sample_payment_d.xml" value="0.180078125" />
         <entry key="..\:/Users/jayna/AndroidStudioProjects/InventoryManagementSystem/app/src/main/res/menu/activity_main_drawer.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/jayna/AndroidStudioProjects/InventoryManagementSystem/app/src/main/res/menu/main.xml" value="0.190625" />
       </map>
