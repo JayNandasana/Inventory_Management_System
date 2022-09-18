@@ -7,7 +7,6 @@
     android:background="@drawable/main"
     tools:context=".login">
 
-
     <Space
         android:id="@+id/space11"
         android:layout_width="match_parent"
