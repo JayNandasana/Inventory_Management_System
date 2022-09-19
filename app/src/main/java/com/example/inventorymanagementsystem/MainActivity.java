@@ -1,18 +1,13 @@
 package com.example.inventorymanagementsystem;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -21,7 +16,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.inventorymanagementsystem.databinding.ActivityMainBinding;
-import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -87,29 +81,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void logout(MenuItem item) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-        builder.setMessage("Do you want to Logout ?");
-        builder.setTitle("Alert !");
-        builder.setCancelable(false);
-
-        builder.setPositiveButton("Yes", (DialogInterface.OnClickListener) (dialog, which) -> {
-            FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(getApplicationContext(),login.class));
-            finish();
-        });
-        builder.setNegativeButton("No", (DialogInterface.OnClickListener) (dialog, which) -> {
-            // If user click no then dialog box is canceled.
-            dialog.cancel();
-        });
-        AlertDialog alertDialog = builder.create();
-        alertDialog.show();
-    }
-    public void add_customer(MenuItem item) {
-        Intent intent = new Intent(MainActivity.this, add_customer.class);
-        startActivity(intent);
-    }public void add_product(MenuItem item) {
-        Intent intent = new Intent(MainActivity.this, add_product.class);
-        startActivity(intent);
-    }
 }
