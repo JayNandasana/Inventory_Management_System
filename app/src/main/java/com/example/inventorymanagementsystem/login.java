@@ -6,9 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +24,12 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class login extends AppCompatActivity {
+    EditText email,password;
+    TextInputLayout TFemil,TFpassword;
+    Button login;
+    TextView register;
+    FirebaseAuth fAuth;
+    ProgressBar progressbar;
 
     TextView createAccount, forgotPassword;
 
@@ -67,6 +77,47 @@ public class login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(login.this,Forgot_password.class));
+        TFemil = findViewById(R.id.textField1);
+        TFpassword= findViewById(R.id.textField2);
+
+        email = findViewById(R.id.lemail);
+        password = findViewById(R.id.lpassword);
+        login = findViewById(R.id.button7);
+        register = findViewById(R.id.register);
+        progressbar = findViewById(R.id.progressBar3);
+        fAuth = FirebaseAuth.getInstance();
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String Temail = email.getText().toString().trim();
+                String Tpassword = password.getText().toString().trim();
+
+                if(TextUtils.isEmpty(Temail)){
+                    TFemil.setError("Email is Required");
+                    return;
+                }if(TextUtils.isEmpty(Tpassword)){
+                    TFpassword.setError("Password is Required");
+                    return;
+                }if(Tpassword.length() < 8){
+                    TFpassword.setError("Password Must be eight characters");
+                    return;
+                }
+                progressbar.setVisibility(View.VISIBLE);
+
+                fAuth.signInWithEmailAndPassword(Temail,Tpassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            Toast.makeText(login.this, "Logged in Successfully.", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        }
+                        else{
+                            Toast.makeText(login.this, "Error ! "+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            progressbar.setVisibility(View.GONE);
+                        }
+                    }
+                });
             }
         });
     }
@@ -103,7 +154,6 @@ public class login extends AppCompatActivity {
             });
         }
     }
-
     private void sendUserToNextActivity() {
         Intent intent = new Intent(login.this,MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
