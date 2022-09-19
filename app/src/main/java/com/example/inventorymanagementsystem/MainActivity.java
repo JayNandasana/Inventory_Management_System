@@ -105,4 +105,11 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
     }
+    public void add_customer(MenuItem item) {
+        Intent intent = new Intent(MainActivity.this, add_customer.class);
+        startActivity(intent);
+    }public void add_product(MenuItem item) {
+        Intent intent = new Intent(MainActivity.this, add_product.class);
+        startActivity(intent);
+    }
 }
