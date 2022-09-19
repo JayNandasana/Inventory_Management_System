@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
+    android:background="@drawable/local"
+    tools:context=".add_customer"/>
     android:background="#DCEDC8"
     tools:context=".add_customer">
 
