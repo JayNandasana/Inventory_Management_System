@@ -104,12 +104,30 @@ public class MainActivity extends AppCompatActivity {
         });
         AlertDialog alertDialog = builder.create();
         alertDialog.show();
+    }public void exit(MenuItem item) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setMessage("Do you want to Exit ?");
+        builder.setTitle("Alert !");
+        builder.setCancelable(false);
+
+        builder.setPositiveButton("Yes", (DialogInterface.OnClickListener) (dialog, which) -> {
+            
+        });
+        builder.setNegativeButton("No", (DialogInterface.OnClickListener) (dialog, which) -> {
+            // If user click no then dialog box is canceled.
+            dialog.cancel();
+        });
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
     }
     public void add_customer(MenuItem item) {
         Intent intent = new Intent(MainActivity.this, add_customer.class);
         startActivity(intent);
     }public void add_product(MenuItem item) {
         Intent intent = new Intent(MainActivity.this, add_product.class);
+        startActivity(intent);
+    }public void profile(MenuItem item) {
+        Intent intent = new Intent(MainActivity.this, profile.class);
         startActivity(intent);
     }
 }

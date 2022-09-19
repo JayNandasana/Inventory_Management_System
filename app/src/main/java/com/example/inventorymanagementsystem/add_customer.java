@@ -2,6 +2,8 @@ package com.example.inventorymanagementsystem;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
@@ -19,7 +21,5 @@ public class add_customer extends AppCompatActivity {
         setContentView(R.layout.activity_add_customer);
 
         getSupportActionBar().setTitle("Add Customer");
-
-
     }
 }
