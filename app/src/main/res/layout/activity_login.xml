@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main"
+    android:background="#ADD8E6"
     tools:context=".login">
 
     <Space
@@ -49,7 +49,7 @@
         android:layout_marginRight="40dp"
         android:hint="Email"
         android:textColorHint="@color/black"
-        app:boxBackgroundColor="#806E8BE3"
+        app:boxBackgroundColor="#CCFFFFFF"
         app:endIconMode="clear_text"
         app:endIconTint="@color/black"
         app:errorEnabled="true"
@@ -74,12 +74,11 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:hint="Password"
         android:textColorHint="@color/black"
-        app:boxBackgroundColor="#806E8BE3"
+        app:boxBackgroundColor="#CCF3F3F3"
         app:endIconMode="password_toggle"
         app:endIconTint="@color/black"
         app:errorEnabled="true"
@@ -90,14 +89,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textField1"
         app:startIconDrawable="@android:drawable/ic_lock_idle_lock"
         app:startIconTint="@color/black">
-
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/lpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:textColor="@color/black" />
-
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -105,7 +102,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:backgroundTint="@color/btn"
+        android:backgroundTint="#B311397C"
         android:paddingLeft="26dp"
         android:paddingTop="8dp"
         android:paddingRight="26dp"
