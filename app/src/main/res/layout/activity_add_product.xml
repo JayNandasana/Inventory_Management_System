@@ -7,4 +7,5 @@
     android:background="@drawable/local"
     tools:context=".add_product">
 
+
 </androidx.constraintlayout.widget.ConstraintLayout>

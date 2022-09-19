@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 
 public class add_customer_btn extends AppCompatActivity {
@@ -19,4 +20,6 @@ public class add_customer_btn extends AppCompatActivity {
         Intent intent = new Intent(add_customer_btn.this, add_customer.class);
         startActivity(intent);
     }
+
+
 }
