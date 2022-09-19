@@ -9,23 +9,12 @@
             android:icon="@drawable/ic_menu_home"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_add_customer"
-            android:icon="@drawable/add_customer"
-            android:title="Add Customer"
-            android:onClick="add_customer"/>
-        <item
-            android:id="@+id/nav_add_product"
-            android:icon="@drawable/add_product"
-            android:title="Add Product"
-            android:onClick="add_product"/>
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_logout"
-            android:title="Log Out"
-            android:onClick="logout"/>
-        <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_exit"
             android:title="Exit" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_logout"
+            android:title="Log Out" />
     </group>
 </menu>

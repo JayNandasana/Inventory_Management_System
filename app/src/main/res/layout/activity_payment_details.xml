@@ -7,5 +7,4 @@
     android:background="@drawable/local"
     tools:context=".payment_details">
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
