@@ -41,8 +41,6 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment:2.5.1'
     implementation 'androidx.navigation:navigation-ui:2.5.1'
     implementation 'com.google.android.gms:play-services-cast-framework:20.0.0'
-    implementation 'com.google.firebase:firebase-database:20.0.6'
-    implementation 'com.google.firebase:firebase-auth:21.0.8'
     implementation 'com.google.firebase:firebase-auth:19.2.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.13.2'
