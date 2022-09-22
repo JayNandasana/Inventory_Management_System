@@ -19,7 +19,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 
 
-public class Forgot_password extends AppCompatActivity {
+public class Forgot_password extends AppCompatActivity  {
 
     TextView backtologin;
     TextInputLayout emailEditText;

@@ -28,13 +28,12 @@ public class SignUp extends AppCompatActivity {
 
     TextView backToLogin;
     TextInputLayout InName, InEmail, InPass, InConPass;
-    Button InRegisterBtn;
+    Button InRegisterBtn ;
     String EmailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     ProgressDialog progressDialog;
 
     FirebaseAuth mAuth;
     FirebaseUser mUser;
-
 
 
     @Override
