@@ -75,32 +75,60 @@ public class SignUp extends AppCompatActivity {
         String Email = InEmail.getEditText().getText().toString();
         String Password = InPass.getEditText().getText().toString();
         String ConPassword = InConPass.getEditText().getText().toString();
+        int a=0;
 
         if(Name.isEmpty()){
             InName.setError("Name is required!");
             InName.requestFocus();
-        }else if(Email.isEmpty()){
+            a=1;
+        }else {
+            InName.setError(null);
+            a=0;
+        }
+
+        if(Email.isEmpty()){
             InEmail.setError("Email is required!");
             InEmail.requestFocus();
+            a=1;
         }else if (!Email.matches(EmailPattern)) {
             InEmail.setError("Enter Valid Email!");
             InEmail.requestFocus();
-        }else if(Password.isEmpty())
+            a=1;
+        }else {
+            InEmail.setError(null);
+            a=0;
+        }
+
+        if(Password.isEmpty())
         {
             InPass.setError("Password is required!");
             InPass.requestFocus();
+            a=1;
         }else if(Password.length()<6){
             InPass.setError("Enter atlas 6 characters!");
             InPass.requestFocus();
-        }else if(ConPassword.isEmpty()){
+            a=1;
+        }else {
+            InPass.setError(null);
+            a=0;
+        }
+
+        if(ConPassword.isEmpty()){
             InConPass.setError("Confirm password is required!");
+            InConPass.requestFocus();
+            a=1;
         }
         else if(!Password.matches(ConPassword))
         {
             InConPass.setError("Password does not match");
             InConPass.requestFocus();
-        }else
-        {
+            a=1;
+        }else {
+            InConPass.setError(null);
+            a=0;
+        }
+
+        if(a==0) {
             InName.setError(null);
             InEmail.setError(null);
             InPass.setError(null);
