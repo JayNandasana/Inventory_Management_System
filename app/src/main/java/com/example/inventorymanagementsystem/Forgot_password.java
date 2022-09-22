@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Forgot_password extends AppCompatActivity {
 
-    TextView backtologin ;
+    TextView backtologin;
     TextInputLayout emailEditText;
     Button resetPasswordButton;
     String emailpattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";

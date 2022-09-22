@@ -53,7 +53,7 @@ public class SignUp extends AppCompatActivity {
         InRegisterBtn = findViewById(R.id.registerbtn);
         progressDialog = new ProgressDialog(this);
         mAuth = FirebaseAuth.getInstance();
-        mUser = mAuth.getCurrentUser();
+        mUser = mAuth.getCurrentUser() ;
 
         backToLogin.setOnClickListener(new View.OnClickListener() {
             @Override
