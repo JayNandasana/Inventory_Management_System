@@ -7,7 +7,7 @@
     android:background="#BDF2D5"
     android:orientation="vertical"
     tools:context=".add_product"
-    android:layout_gravity="center">
+    android:layout_gravity="center" >
 
     <TextView
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
         android:gravity="center"
         android:paddingTop="50dp"
         android:text="Add Customer"
-        android:textSize="40dp" />
+        android:textSize="40dp"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
