@@ -19,6 +19,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class login extends AppCompatActivity {
     EditText email,password;
@@ -27,6 +28,7 @@ public class login extends AppCompatActivity {
     TextView register;
     FirebaseAuth fAuth;
     ProgressBar progressbar;
+    FirebaseUser muser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +46,7 @@ public class login extends AppCompatActivity {
         register = findViewById(R.id.register);
         progressbar = findViewById(R.id.progressBar3);
         fAuth = FirebaseAuth.getInstance();
+        muser=fAuth.getCurrentUser();
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,5 +85,17 @@ public class login extends AppCompatActivity {
     public void register(View view){
         Intent intent = new Intent(login.this, SignUp.class);
         startActivity(intent);
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        if(muser !=null){
+            Intent i =new Intent(login.this,MainActivity.class);
+            startActivity(i);
+            finish();
+        }else{
+            Intent i =new Intent(login.this,login.class);
+        }
     }
 }

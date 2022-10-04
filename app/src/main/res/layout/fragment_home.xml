@@ -25,7 +25,6 @@
             android:layout_height="170dp"
             android:layout_marginTop="7dp"
 
-
             android:layout_marginRight="50dp"
             android:layout_marginBottom="7dp"
             android:backgroundTint="#F3F16D"
